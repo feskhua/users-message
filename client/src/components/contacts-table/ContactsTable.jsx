@@ -44,6 +44,7 @@ const rows = [
     label: 'Product name',
   },
   { id: 'status', numeric: true, disablePadding: false, label: 'Status' },
+  { id: 'updatedAt', numeric: false, disablePadding: true, label: 'Updated' },
 ];
 
 class ContactsTable extends Component {
@@ -54,7 +55,7 @@ class ContactsTable extends Component {
   };
 
   componentDidMount() {
-    this.props.loadContacts({ limit: 10 });
+    this.props.loadContacts({ limit: 25 });
   }
 
   componentWillReceiveProps(nextProps, nextContext) {
@@ -206,6 +207,7 @@ class ContactsTable extends Component {
                         {contact.productName}
                       </TableCell>
                       <TableCell align="right">{contact.status}</TableCell>
+                      <TableCell align="right">{contact.updatedAt}</TableCell>
                       <TableCell padding="checkbox">
                         <IconButton
                           component={Link}
@@ -221,7 +223,7 @@ class ContactsTable extends Component {
             </MatTable>
           </div>
           <TablePagination
-            rowsPerPageOptions={[3, 5, 10, 25]}
+            rowsPerPageOptions={[25, 50, 100]}
             component="div"
             count={total}
             rowsPerPage={limit}

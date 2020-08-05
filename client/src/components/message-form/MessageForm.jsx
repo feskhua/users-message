@@ -44,7 +44,7 @@ class MessageForm extends PureComponent {
               fullWidth
               multiline
               rowsMax={25}
-              rows={3}
+              rows={6}
               variant="outlined"
             />
           </Grid>

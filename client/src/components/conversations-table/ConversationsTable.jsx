@@ -21,8 +21,8 @@ import MessageForm from '../message-form';
 import * as utils from '../../utils';
 
 const rows = [
-  { id: 'phoneNumber', label: 'Phone number' },
   { id: 'createdAt', label: 'Date' },
+  { id: 'phoneNumber', label: 'Phone number' },
   { id: 'prospectName', label: 'Prospect name' },
   { id: 'productName', label: 'Product name' },
   { id: 'body', label: 'Body' },
@@ -58,7 +58,7 @@ class ConversationsTable extends PureComponent {
   };
 
   componentDidMount() {
-    this.loadConversations({ limit: 10 });
+    this.loadConversations({ limit: 25 });
   }
 
   loadConversations = (params = {}) => {
@@ -274,7 +274,7 @@ class ConversationsTable extends PureComponent {
             </Table>
           </div>
           <TablePagination
-            rowsPerPageOptions={[3, 5, 10, 25]}
+            rowsPerPageOptions={[25, 50, 100]}
             component="div"
             count={total}
             rowsPerPage={limit}

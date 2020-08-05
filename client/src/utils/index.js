@@ -1,6 +1,6 @@
 import dateFnsFormat from 'date-fns/format';
 
-export const defaultPagination = { limit: 10, offset: 0, total: 0 };
+export const defaultPagination = { limit: 25, offset: 0, total: 0 };
 
 export function desc(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {

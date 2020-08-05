@@ -121,7 +121,7 @@ class ContactNotificationsTable extends PureComponent {
           </Table>
         </div>
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={[25, 50, 100]}
           component="div"
           count={messagesLength}
           rowsPerPage={rowsPerPage}
